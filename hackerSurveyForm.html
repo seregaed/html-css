@@ -18,12 +18,36 @@
     background: lightgray; /* Цвет фона */
     text-align: center;
    }
+   #survey-form {
+     padding: 5px; /* Поля вокруг текста */
+     background: white; /* Цвет фона */
+     text-align: center;
+   }
+   table {
+    width: 40%; /* Ширина таблицы */
+    background: white; /* Цвет фона таблицы */
+    color: black; /* Цвет текста */
+    border-spacing: 1px; /* Расстояние между ячейками */
+    text-align: center;
+    margin: auto;
+   }
+   td, th {
+    background: white; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг текста */
+    text-align: left;
+   }
 </style>
 <body>
 
 <h1 id="title">Hacker survey</h1>
 
 <p id="description">Information - the tru power.</p>
+<table>
+<form id="survey-form" method="POST">
+<tr><td>Name or nickname </td><td><input type="text" id="name"></td></td>
+<tr><td>Email</td><td><input type="text" id="email" pattern="[^ @]*@[^ @]*"/></td></tr>
+</table>
+<input type="submit" value="Submit Now!">
 
 </body>
 </html>
