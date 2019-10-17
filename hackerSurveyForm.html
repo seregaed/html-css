@@ -23,6 +23,10 @@
      background: white; /* Цвет фона */
      text-align: center;
    }
+   .submit {
+     text-align: center;
+     padding: 10px;
+   }
    table {
     width: 40%; /* Ширина таблицы */
     background: white; /* Цвет фона таблицы */
@@ -51,6 +55,7 @@
  .form-group>input{
    border:none;
  }
+
 </style>
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
@@ -59,11 +64,11 @@
 <p id="description">Information - the tru power.</p>
 <table>
 <form id="survey-form" method="POST">
-<tr><td>Name or nickname </td><td><label id="name-label" for="name">* Name: </label><input type="text" name="name" id="name"></td></td>
-<tr><td>Email</td><td><input type="email" id="email" pattern="[^ @]*@[^ @]*"/></td></tr>
+<tr><td>Name or nickname </td><td><input type="text" name="name" id="name" placeholder="Your name"></td></td>
+<tr><td>Email</td><td><input type="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your email"/> </td></tr>
 <tr><td>How many years have You been coding? </td><td><input type="number" id="number" min="0" max="100"></td></td>
 </table>
-<input type="submit" value="Submit Now!">
+<div class="submit"> <input id="submit" type="submit" value="Submit Now!"> </div>
 
 </body>
 </html>
