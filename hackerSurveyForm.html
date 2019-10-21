@@ -58,13 +58,14 @@
 
 </style>
 <body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 <h1 id="title">Hacker survey</h1>
 
 <p id="description">Information - the tru power.</p>
 <table>
 <form id="survey-form" method="POST">
-<tr><td>Name or nickname </td><td><input type="text" name="name" id="name" placeholder="Your name"></td></td>
+<tr><td><label for="name" id="name-label">Name:</label></td><td><input id="name" name="name" type="text"  placeholder="Your name"></td></td>
 <tr><td>Email</td><td><input type="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your email"/> </td></tr>
 <tr><td>How many years have You been coding? </td><td><input type="number" id="number" min="0" max="100"></td></td>
 </table>
