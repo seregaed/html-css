@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
 </head>
 <style>
-#title {
+  #title {
   /*   position: absolute;  Абсолютное позиционирование */
     padding: 5px; /* Поля вокруг текста */
     background: white; /* Цвет фона */
     text-align: center;
    }
-
-#description {
+   #form-control {
+    text-align: center;
+   }
+   #description {
   /*   position: absolute; Абсолютное позиционирование */
     padding: 5px; /* Поля вокруг текста */
     background: lightgray; /* Цвет фона */
@@ -26,19 +28,6 @@
    .submit {
      text-align: center;
      padding: 10px;
-   }
-   table {
-    width: 40%; /* Ширина таблицы */
-    background: white; /* Цвет фона таблицы */
-    color: black; /* Цвет текста */
-    border-spacing: 1px; /* Расстояние между ячейками */
-    text-align: center;
-    margin: auto;
-   }
-   td, th {
-    background: white; /* Цвет фона ячеек */
-    padding: 5px; /* Поля вокруг текста */
-    text-align: left;
    }
    .form-group{
    padding:10px;
@@ -58,17 +47,26 @@
 
 </style>
 <body>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 <h1 id="title">Hacker survey</h1>
 <p id="description">Information - the tru power.</p>
-<table>
-<form id="survey-form" method="POST">
-<tr><td><label for="name" id="name-label">Name:</label></td><td> <input id="name" type="text"  name="name"   placeholder="Your name" required /></td></td>
-<tr><td>Email</td><td><input type="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your email" required /></td></tr>
-<tr><td>How many years have You been coding? </td><td><input type="number" id="number" min="0" max="100"></td></td>
+
+<form id="survey-form">
+<div>
+<label id="name-label" for="name">Name or nickname</label><input
+  type="text"
+  name="name"
+  id="name"
+  class="form-control"
+  placeholder="Enter your word"
+  required
+/>
+</div>
+Email<input type="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your email" required />
+How many years have You been coding? <input type="number" id="number" min="0" max="100">
 </form>
-</table>
+
 <div class="submit"> <input id="submit" type="submit" value="Submit Now!"> </div>
 
 </body>
