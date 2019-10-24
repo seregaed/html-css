@@ -24,6 +24,8 @@
     padding: 5px; /* Поля вокруг текста */
     background: lightgray; /* Цвет фона */
     text-align: center;
+    width: 350px;
+    margin: auto;
    }
    #survey-form {
      padding: 5px; /* Поля вокруг текста */
@@ -51,8 +53,8 @@ form input, form select {
 <body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-<h1 id="title">Hacker survey</h1>
-<p id="description">Information - the tru power.</p>
+<h1 id="title">The Hacker Survey</h1>
+<p id="description"><b>Information - the tru power.</b></p>
 
 <form id="survey-form" class="form-horizontal">
 <div class="form-group has-success">
@@ -61,16 +63,107 @@ form input, form select {
   type="text"
   name="name"
   id="name"
-  class="form-control"
   placeholder="Enter your word"
   required
 />
 </div>
-Email<input type="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your email" required />
-How many years have You been coding? <input type="number" id="number" min="0" max="100">
-</form>
+<div class="form-group has-success">
+<label id="email-label" for="email" class="control-label col-sm-6">Email</label><input type="email" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your email" required/>
+</div>
+<div class="form-group has-success">
+<label id="number-label" for="number" class="control-label col-sm-6">Years of Hacking</label><input type="number" id="number" min="0" placeholder="Your experience" max="100" style="padding-top: 6px;">
+
+</div>
+<div class="form-group has-success">
+     <p class="control-label col-sm-6"><b>Your best programming language</b></p>
+     <select id="dropdown" name="role"  required>
+       <option disabled selected value>Select your destiny</option>
+       <option value="JS">JavaScript</option>
+       <option value="Java">Java</option>
+       <option value="Python">Python</option>
+       <option value="Ruby">Ruby</option>
+       <option value="C">C++</option>
+       <option value="other">Other</option>
+       </select>
+   </div>
+   <div class="form-group has-success">
+   <p class="control-label col-sm-6"><b>Are you ethical hacker?</b><br><br></p>
+
+        <label>
+          <input
+            name="ethical"
+            value="definitely"
+            type="radio"
+            class="input-radio"
+            checked
+          />Definitely</label><br>
+        <label>
+          <input
+            name="ethical"
+            value="maybe"
+            type="radio"
+            class="input-radio"
+          />Maybe</label><br>
+
+        <label>
+          <input
+            name="ethical"
+            value="not-sure"
+            type="radio"
+            class="input-radio"
+          />Not sure</label><br>
+ </div>
+ <div class="form-group has-success">
+    <p class="control-label col-sm-6">
+      <b>What is your best way for learning?</b><br><br>
+    </p>
+
+    <label
+      > <input
+        name="prefer"
+        value="FCC"
+        type="checkbox"
+        class="input-checkbox"
+      />Freecodecamp</label
+    ><br>
+    <label>
+      <input
+        name="prefer"
+        value="Youtube"
+        type="checkbox"
+        class="input-checkbox"
+      />Youtube</label
+    ><br>
+    <label
+      ><input
+        name="prefer"
+        value="books"
+        type="checkbox"
+        class="input-checkbox"
+      />books</label
+    ><br>
+    <label
+      ><input
+        name="prefer"
+        value="practice"
+        type="checkbox"
+        class="input-checkbox"
+      />practice</label
+    >
+  </div>
+  <div class="form-group has-success">
+      <p class="control-label col-sm-6"><b>What do you recommend to a beginner?</b></p>
+      <textarea
+        style="margin-top: 10px;"
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your advice..."
+      ></textarea>
+    </div>
+
 
 <div class="submit"> <input id="submit" type="submit" value="Submit Now!"> </div>
-
+</form>
 </body>
 </html>
