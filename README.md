@@ -1,4 +1,4 @@
-# Responsive Web Design Projects - Build a Survey Form.
+# Responsive Web Design Projects.
 
-From freecodecamp.org 
+Based on Responsive Web Design Projects by freecodecamp.org 
 Created by Sergey Edalin, 2019
