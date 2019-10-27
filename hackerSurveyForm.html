@@ -7,13 +7,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <style>
+
+body {
+  background-image: url(https://securitybaron.com/wp-content/uploads/2018/04/cryptocoding.jpg);
+  background-size: cover;
+}
   #title {
   /*   position: absolute;  Абсолютное позиционирование */
     padding: 5px; /* Поля вокруг текста */
-    background: white; /* Цвет фона */
     text-align: center;
+    color: green;
+    font-family: 'Press Start 2P', cursive;
    }
    #form-control {
   display: block;
@@ -22,17 +30,39 @@
    #description {
   /*   position: absolute; Абсолютное позиционирование */
     padding: 5px; /* Поля вокруг текста */
-    background: lightgray; /* Цвет фона */
+    background: white; /* Цвет фона */
     text-align: center;
     width: 350px;
     margin: auto;
+    color: green;
+    border: 2px solid green;
+    border-radius: 25px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 80%;
    }
+
    #survey-form {
-     padding: 5px; /* Поля вокруг текста */
-     background: white; /* Цвет фона */
+     background: var(--color-darkblue-alpha);
+     padding: 2.5rem 0.625rem;
+     border-radius: 0.25rem;
      text-align: justify;
      width: 400px;
      margin: auto;
+     }
+     #back {
+       background: #bfe6e8;
+       background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+       padding: 2.5rem 0.625rem;
+       border-radius: 0.25rem;
+       width: 400px;
+       margin: auto;
+       border: 3px solid green;
+       border-radius: 25px;
+       opacity: 0.9;
      }
    .submit {
      text-align: center;
@@ -53,8 +83,11 @@ form input, form select {
 <body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+<div id=back style="margin-top: 10px;margin-bottom: 10px;">
 <h1 id="title">The Hacker Survey</h1>
-<p id="description"><b>Information - the tru power.</b></p>
+<p id="description"><b>Information is Tru Power</b></p>
 
 <form id="survey-form" class="form-horizontal">
 <div class="form-group has-success">
@@ -165,5 +198,6 @@ form input, form select {
 
 <div class="submit"> <input id="submit" type="submit" value="Submit Now!"> </div>
 </form>
+</div>
 </body>
 </html>
