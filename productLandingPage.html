@@ -50,7 +50,10 @@ body {
      align-items: center;
      background-color: #eee;
    }
-
+   @media (max-width: 800px) {
+     #pricing {
+       flex-direction: column;
+     }
 
 </style>
 <body>
@@ -65,10 +68,45 @@ body {
         margin-right=auto;
         width= 60vw;
               />
+
+<nav id="nav-bar">
+  <a class="nav-link" href="#about">About</a> |
+  <a class="nav-link" href="#lawyer">lawyer</a>|
+  <a class="nav-link" href="#contacts">contacts</a>
+</nav>
 </header>
 
 <div id=back style="margin-top: 10px;margin-bottom: 10px;">
 <h1 id="title">Product</h1>
+
+<div class="container">
+<section id="lawyer">
+  <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aK2PVtgWLp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+</div>
+<div class="container">
+  <section id="about">
+  </section>
+</div>
+<div class="container">
+  <section id="contacts">
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input
+        name="email"
+        id="email"
+        type="email"
+        placeholder="Enter your email address"
+        required
+      />
+      <input id="submit" type="submit" value="Get Started" class="btn" />
+    </form>
+  </section>
+</div>
+
+</div>
+
+</div>
+
 
 </body>
 </html>
