@@ -57,10 +57,38 @@ body {
      border-color: #337ab7;
    }
    @media (max-width: 800px) {
-     #pricing {
-       flex-direction: column;
-     }
+   }
+  #prices {
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  }
+  .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 1fr;
+  grid-template-areas: "head head head" "about about about" "price1 price2 price3" "contacts contacts contacts";
+}
 
+.head { grid-area: head;
+      align-items: start;;
+    }
+
+.about { grid-area: about; }
+
+.price1 { grid-area: price1; }
+
+.price2 { grid-area: price2; }
+
+.price3 { grid-area: price3; }
+
+.contacts { grid-area: contacts; }
 </style>
 <body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
@@ -86,22 +114,36 @@ style="margin-top: 0px;
 margin-bottom: 0px;
 padding-top: 0px;
 padding-bottom: 0px;
-margin-left: 300px;">
+margin-left: 100px;">
 Sergey Edalin - lawyer and consultant</h1>
 </header>
 
-<div id=back style="margin-top: 10px;margin-bottom: 10px;">
+<div class="grid-container">
+  <div class="head"></div>
+  <div class="about">
+    <div class="container">
+      <section id="about">
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aK2PVtgWLp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+    </div>
+  </div>
+  <div class="price1"></div>
+  <div class="price2"></div>
+  <div class="price3"></div>
+  <div class="contacts"></div>
+</div>
 
 
-<div class="container">
-<section id="lawyer">
-  <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aK2PVtgWLp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<section id="prices">
+<div class="prices">
+  <p>   Consultation </p>
+</div>
+
+
 </section>
-</div>
-<div class="container">
-  <section id="about">
-  </section>
-</div>
+
+
 <div class="container">
   <section id="contacts">
     <form id="form" action="https://www.freecodecamp.com/email-submit">
