@@ -57,22 +57,13 @@ body {
      border-color: #337ab7;
    }
    @media (max-width: 800px) {
+
    }
-  #prices {
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: calc(100% / 3);
-  margin: 10px;
-  border: 1px solid #000;
-  border-radius: 3px;
-  }
+
   .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 1fr 1fr 1fr;
+  grid-template-rows: 100px 400px 1fr 1fr;
   grid-template-areas: "head head head" "about about about" "price1 price2 price3" "contacts contacts contacts";
 }
 
@@ -80,15 +71,48 @@ body {
       align-items: start;;
     }
 
-.about { grid-area: about; }
+.about { grid-area: about;
+  text-align: center; }
 
-.price1 { grid-area: price1; }
+.price1 { grid-area: price1;
+  background-color: white;
+  border: 5px solid #337ab7;
+  border-radius: 50px;
+  text-align: center;
+    margin-left: 150px;
+    width: 350px;
+    height: 400px;
+}
 
-.price2 { grid-area: price2; }
+.price2 {
+  grid-area: price2;
+  background-color: white;
+  border: 5px solid #337ab7;
+  border-radius: 50px;
+  text-align: center;
+    margin: auto;
+    width: 350px;
+    height: 400px;
+  }
 
-.price3 { grid-area: price3; }
+.price3 { grid-area: price3;
+  background-color: white;
+  border: 5px solid #337ab7;
+  border-radius: 50px;
+  text-align: center;
+    margin-right: 150px;
+    width: 350px;
+    height: 400px;
+  }
 
-.contacts { grid-area: contacts; }
+.contacts { grid-area: contacts;
+text-align: center;
+padding: 10px;
+}
+
+#prices {
+
+  }
 </style>
 <body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
@@ -105,8 +129,8 @@ body {
               />
 
 <nav id="nav-bar" style="margin-left: 20px;">
-  <a class="nav-link" href="#about">about</a> |
-  <a class="nav-link" href="#prices">prices</a>|
+  <a class="nav-link" href="#about">about |</a>
+  <a class="nav-link" href="#prices">prices |</a>
   <a class="nav-link" href="#contacts">contacts</a>
 </nav>
 <h1 id="title"
@@ -114,7 +138,7 @@ style="margin-top: 0px;
 margin-bottom: 0px;
 padding-top: 0px;
 padding-bottom: 0px;
-margin-left: 100px;">
+margin-left: 300px;">
 Sergey Edalin - lawyer and consultant</h1>
 </header>
 
@@ -123,46 +147,51 @@ Sergey Edalin - lawyer and consultant</h1>
   <div class="about">
     <div class="container">
       <section id="about">
-          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aK2PVtgWLp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Lawyer since 2010. More than 1000 clients.</p> <br>
+          <iframe style="border: 5px solid #337ab7;
+          border-radius: 50px;" id="video" width="560" height="315" src="https://www.youtube.com/embed/aK2PVtgWLp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </section>
     </div>
   </div>
-  <div class="price1"></div>
-  <div class="price2"></div>
-  <div class="price3"></div>
-  <div class="contacts"></div>
-</div>
-
-
-
-<section id="prices">
-<div class="prices">
-  <p>   Consultation </p>
-</div>
-
-
+  <section id="prices">
 </section>
+  <div class="price1">
+<p style="margin-top: 150px;">One consultation.<br>
+  1000 Rub</p>
+  </div>
 
-
-<div class="container">
-  <section id="contacts">
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
-      <input
-        name="email"
-        id="email"
-        type="email"
-        placeholder="Enter your email address"
-        required
-      />
-      <input id="submit" type="submit" value="Get Started" class="btn" />
-    </form>
-  </section>
+  <div class="price2">
+    <p style="margin-top: 150px;">Usual case.<br>
+      40 000 Rub</p>
 </div>
+  <div class="price3">
+    <p style="margin-top: 150px;">Hard case.<br>
+      150 000 Rub</p>
+    </div>
 
+  <div class="contacts">
+    <div class="container">
+      <section id="contacts">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <br><br>
+            <input style="padding: 10px;"
+            type="text"
+            placeholder="Enter your question"
+            required
+          /> <br><br>
+          <input style="padding: 10px;"
+            name="email"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          /><br><br>
+          <input style="padding: 10px;" id="submit" type="submit" value="Send to lawyer" class="btn" />
+        </form>
+      </section></div>
 </div>
-
 </div>
-
-
+</div>
+</div>
 </body>
 </html>
